@@ -1,0 +1,26 @@
+<html>
+  <style></style>
+  <body>
+    <button type="button" class="hamburger" onclick="toggleMenu()" id="button">
+      Open
+    </button>
+    <nav id="nav" style="display: none;">
+      <a href="myurl">my link1</a>
+      <a href="myurl">my link2</a>
+      <a href="myurl">my link3</a>
+    </nav>
+  </body>
+
+  <script>
+    function toggleMenu() {
+      let el = document.querySelector("#nav");
+      if (el.style.display === "block") {
+        el.style.display = "none";
+        document.querySelector("#button").innerHTML = "Open";
+      } else {
+        el.style.display = "block";
+        document.querySelector("#button").innerHTML = "Close";
+      }
+    }
+  </script>
+</html>
